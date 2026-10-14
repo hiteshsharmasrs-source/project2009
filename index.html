@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>सुंदर सा इंडेक्स ✦ attractive</title>
+  <!-- Google Fonts for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons (optional but adds charm) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #f9f3fe 0%, #e8d9ff 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      color: #2a1b4a;
+    }
+
+    /* main glass card */
+    .index-card {
+      max-width: 1000px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 3.5rem;
+      box-shadow: 
+        0 25px 50px -10px rgba(107, 70, 193, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.6) inset,
+        0 0 0 1px rgba(210, 180, 255, 0.3);
+      padding: 2.5rem 2.8rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    /* subtle shine on hover */
+    .index-card:hover {
+      box-shadow: 
+        0 35px 60px -12px rgba(128, 90, 213, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.9) inset,
+        0 0 0 1px #d9c6ff;
+    }
+
+    /* header area with gradient text */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.8rem;
+      border-bottom: 2px dashed rgba(157, 122, 234, 0.3);
+      padding-bottom: 1.6rem;
+    }
+
+    .logo h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #6b3fa0, #b17aff, #7e5bef);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo h1 i {
+      background: linear-gradient(145deg, #a87ffb, #c9aaff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 2rem;
+      transform: rotate(5deg);
+    }
+
+    .badge {
+      background: rgba(190, 160, 255, 0.25);
+      backdrop-filter: blur(5px);
+      padding: 0.6rem 1.4rem;
+      border-radius: 100px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #4d2d8a;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 10px rgba(150, 110, 240, 0.15);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge i {
+      color: #8f6ed6;
+      font-size: 0.9rem;
+    }
+
+    /* intro text */
+    .intro {
+      margin-bottom: 2.8rem;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #3e2c63;
+      max-width: 80%;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 0.8rem 1.4rem;
+      border-radius: 60px;
+      display: inline-block;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 6px 14px rgba(180, 150, 255, 0.1);
+    }
+
+    .intro p i {
+      color: #9f7aea;
+      margin-right: 8px;
+    }
+
+    /* index grid — attractive cards */
+    .index-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .index-item {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 2rem;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 12px 24px -10px rgba(139, 92, 246, 0.15);
+      transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.2s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* decorative circle gradient behind each item */
+    .index-item::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(200, 170, 255, 0.35) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+      transition: all 0.4s ease;
+    }
+
+    .index-item:hover::before {
+      transform: scale(1.4);
+      opacity: 0.7;
+    }
+
+    .index-item:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 28px 38px -16px #b59af0, 0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+      border-color: rgba(220, 200, 255, 0.8);
+    }
+
+    /* icon circle */
+    .item-icon {
+      width: 54px;
+      height: 54px;
+      background: linear-gradient(145deg, #fff, #f2eaff);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      color: #7450c9;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 8px 16px -6px rgba(150, 110, 240, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+      position: relative;
+      z-index: 1;
+      transition: all 0.2s;
+    }
+
+    .index-item:hover .item-icon {
+      background: linear-gradient(145deg, #f0e6ff, #ffffff);
+      color: #5e2eb0;
+      transform: rotate(3deg) scale(1.02);
+    }
+
+    .index-item h3 {
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: #2e1a4f;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .index-item p {
+      font-size: 0.95rem;
+      color: #5d4a7a;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+      position: relative;
+      z-index: 1;
+      flex: 1;
+    }
+
+    .item-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #7c5cd6;
+      text-decoration: none;
+      border-bottom: 1.5px solid transparent;
+      transition: all 0.2s;
+      align-self: flex-start;
+      padding-bottom: 2px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .item-link i {
+      transition: transform 0.2s;
+      font-size: 0.8rem;
+    }
+
+    .item-link:hover {
+      color: #5530a8;
+      border-bottom-color: #b69eff;
+    }
+
+    .item-link:hover i {
+      transform: translateX(4px);
+    }
+
+    /* footer area */
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1.8rem;
+      border-top: 2px dashed rgba(157, 122, 234, 0.3);
+      font-size: 0.9rem;
+      color: #5e4880;
+    }
+
+    .footer .social i {
+      font-size: 1.2rem;
+      margin-left: 0.9rem;
+      color: #8f6ed6;
+      transition: all 0.2s;
+      cursor: default;
+      opacity: 0.8;
+    }
+
+    .footer .social i:hover {
+      color: #6c3ec2;
+      transform: scale(1.1);
+      opacity: 1;
+    }
+
+    .footer .heart {
+      color: #b17aff;
+      font-weight: 500;
+    }
+
+    /* responsiveness */
+    @media (max-width: 650px) {
+      .index-card {
+        padding: 2rem 1.5rem;
+        border-radius: 2.5rem;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+
+      .logo h1 {
+        font-size: 1.9rem;
+      }
+
+      .intro p {
+        max-width: 100%;
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+      }
+
+      .index-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .footer .social i {
+        margin: 0 0.6rem;
+      }
+    }
+
+    /* small animated sparkle (extra cuteness) */
+    @keyframes softGlow {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
+
+    .badge i {
+      animation: softGlow 3s infinite ease-in-out;
+    }
+
+    /* custom scrollbar for a polished feel */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(230, 215, 255, 0.4);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #bda2ff;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a07ae6;
+    }
+  </style>
+</head>
+<body>
+  <div class="index-card">
+    <!-- Header with logo and a friendly badge -->
+    <div class="header">
+      <div class="logo">
+        <h1>
+          <i class="fas fa-sparkles"></i> 
+          इंडेक्स
+        </h1>
+      </div>
+      <div class="badge">
+        <i class="fas fa-star"></i> attractive & सुंदर
+      </div>
+    </div>
+
+    <!-- Short intro line (Hinglish touch) -->
+    <div class="intro">
+      <p>
+        <i class="fas fa-hand-sparkles"></i> 
+        आपका स्वागत है — यहाँ सब कुछ आसान और खूबसूरत तरीके से मिलेगा।
+      </p>
+    </div>
+
+    <!-- Main index grid — these are the attractive items -->
+    <div class="index-grid">
+      <!-- Item 1 -->
+      <div class="index-item">
+        <div class="item-icon">
+          <i class="fas fa-compass"></i>
+        </div>
+        <h3>शुरुआत</h3>
+        <p>यहाँ से शुरू करें — बेसिक गाइड और परिचय।</p>
+        <a href="#" class="item-link">जाएँ <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="index-item">
+        <div class="item-icon">
+          <i class="fas fa-layer-group"></i>
+        </div>
+        <h3>संग्रह</h3>
+        <p>सभी संसाधन, टूल्स और डाउनलोड एक जगह।</p>
+        <a href="#" class="item-link">एक्सप्लोर करें <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="index-item">
+        <div class="item-icon">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <h3>डिज़ाइन</h3>
+        <p>रचनात्मक लेआउट, रंग और स्टाइल गाइड।</p>
+        <a href="#" class="item-link">देखें <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="index-item">
+        <div class="item-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>प्रगति</h3>
+        <p>आपकी सीखने की यात्रा और आँकड़े।</p>
+        <a href="#" class="item-link">विश्लेषण <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Item 5 (extra) -->
+      <div class="index-item">
+        <div class="item-icon">
+          <i class="fas fa-camera-retro"></i>
+        </div>
+        <h3>गैलरी</h3>
+        <p>तस्वीरें, वीडियो और मीडिया कलेक्शन।</p>
+        <a href="#" class="item-link">देखें <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Item 6 (extra) -->
+      <div class="index-item">
+        <div class="item-icon">
+          <i class="fas fa-envelope-open-text"></i>
+        </div>
+        <h3>संपर्क</h3>
+        <p>सवाल? हमें यहाँ मैसेज भेजें।</p>
+        <a href="#" class="item-link">पूछें <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Footer with subtle social icons and love -->
+    <div class="footer">
+      <div class="heart">
+        <i class="fas fa-heart" style="color: #b17aff;"></i> 
+        खूबसूरत पल के लिए धन्यवाद
+      </div>
+      <div class="social">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-x-twitter"></i>
+        <i class="fab fa-github"></i>
+        <i class="fas fa-globe"></i>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
